@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+}
+
+/* posts */
+
+.post {
+  margin: 24px auto;
+    max-width: 400px;
+    box-shadow: black 4px 8px 20px 4px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.post .title {
+  margin-bottom: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #5d7acd;
+  padding: 12px;
+}
+
+.post .body {
+  margin: 12px;
+  min-height: 200px;
+  text-align: left;
+}
+
+.post .footer {
+  margin-top: 12px;
+  padding: 12px;
+  border-top: 1px solid #000000;
+  text-align: right;
+  background-color: #5d7acd;
+}
