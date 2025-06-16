@@ -34,3 +34,43 @@
   text-align: right;
   background-color: #5d7acd;
 }
+
+/*add post form (page) */
+.addPostPage {
+  margin: 16px auto;
+  display: flex;
+  border:2px solid #4421ad;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.addPostPage form {
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  padding: 16px;
+  font-size: 1.2em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.addPostPage form label {
+  margin: 8px 0;
+}
+
+.formInput, button {
+  margin: 8px 0;
+  height: 32px;
+}
+
+.addPostPage button {
+  color: #fff;
+  background: #441cf1
+}
+
+.addPostPage button:hover {
+  background: #000000
+}
+
+.addPostPage span {
+  color: rgba(255, 0, 0, 1);
+}
