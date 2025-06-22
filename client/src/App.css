@@ -9,7 +9,7 @@
 
 /* navbar */
 .nav {
-  background: #422fff;
+  background: #5d7acd;
   height: 4em;
   display: flex;
   justify-content: left;
@@ -21,7 +21,7 @@
   color: #ffffff;
   margin-right: 12px;
   font-family: monospace;
-  font-size: 2em;
+  font-size: 1.6em;
   text-decoration: none;
   padding: 12px;
 }
@@ -67,7 +67,7 @@
 .addPostPage {
   margin: 16px auto;
   display: flex;
-  border:2px solid #4421ad;
+  border:2px solid #5d7acd;
   flex-direction: column;
   max-width: 400px;
 }
@@ -87,12 +87,16 @@
 
 .formInput, button {
   margin: 8px 0;
-  height: 32px;
+  min-height: 32px;
+  padding: 4px;
 }
 
-.addPostPage button {
+button, .loginForm button {
   color: #fff;
-  background: #441cf1
+  background: #5d7acd;
+  padding: 8px;
+  font-family: monospace;
+  border: none;
 }
 
 .addPostPage button:hover {
@@ -128,7 +132,7 @@
 }
 
 .singlePostTitle, .singlePostFooter {
-  background-color: #4422ff;
+  background-color: #5d7acd;
   color: #fff;
   font-size: 2em;
   padding: .5em;
@@ -136,4 +140,35 @@
 
 .singlePostFooter {
   text-align: right;
+}
+
+.addCommentContainer input, .loginForm input {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2em;
+  height: 32px;
+  padding: 0 8px;
+  margin: 8px;
+}
+
+.comment {
+  border: 1px solid;
+  width: 50%;
+  margin: 8px auto;
+  padding: 12px;
+  text-align: left;
+}
+
+/* login form */
+
+.loginForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 16px auto; 
+  max-width: 360px;
+}
+
+.loginForm button, .loginForm input {
+  width: 100%;
 }
