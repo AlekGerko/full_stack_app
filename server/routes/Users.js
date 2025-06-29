@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { Users } = require("../models");
 const bcrypt = require("bcrypt");
+const { sign } = require("jsonwebtoken");
 
 // router.get("/", async (req, res) => {
 //   // res.send("works"); //to return html
@@ -33,13 +34,19 @@ router.post("/login", async (req, res) => {
 
   const user = await Users.findOne({ where: { username: username } });
   if (!user) {
-    res.json("user doesn't exist");
+    res.json({ error: "user doesn't exist" });
   } else {
     bcrypt.compare(password, user.password).then((match) => {
       if (!match) {
-        res.json("wrong password for this user");
+        res.json({ error: "wrong password for this user" });
       } else {
-        res.json("success login");
+        // res.json({ error: "success login"});
+        const accessToken = sign(
+          { username: user.username, userId: user.id },
+          "personalSecretToken"
+        );
+
+        res.json(accessToken);
       }
     });
   }
