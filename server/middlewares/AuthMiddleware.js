@@ -9,6 +9,7 @@ const validateToken = (req, res, next) => {
 
   try {
     const validToken = verify(accessToken, "personalSecretToken");
+    req.user = validToken; //creates a verable 'user' which i can use whenever im using 'validateToken'
 
     if (validToken) {
       return next();

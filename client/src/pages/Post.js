@@ -31,7 +31,7 @@ function Post() {
         },
         {
           headers: {
-            accessToken: sessionStorage.getItem("personalAccessToken"),
+            accessToken: localStorage.getItem("personalAccessToken"),
           },
         }
       )
@@ -40,7 +40,10 @@ function Post() {
         if (response.data.error) {
           alert(response.data.error);
         } else {
-          const commentToAdd = { commentBody: newComment };
+          const commentToAdd = {
+            commentBody: newComment,
+            c_username: response.data.c_username,
+          };
           setComments([...comments, commentToAdd]);
           setNewCommnet("");
         }
@@ -78,6 +81,7 @@ function Post() {
                 key={key}
                 className="comment">
                 {comment.commentBody}
+                <div className="commentUsername">{comment.c_username}</div>
               </div>
             );
           })}
