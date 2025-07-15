@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* navbar */
+.nav {
+  background: #5d7acd;
+  height: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.nav a{
+  color: #ffffff;
+  margin-right: 12px;
+  font-family: monospace;
+  font-size: 1.6em;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.nav a:hover {
+  scale: 1.2;
+}
+
+.account_area {
+  display: flex;
+  align-items: baseline;
+}
+
+/* posts */
+
+.post {
+  margin: 24px auto;
+  max-width: 400px;
+  box-shadow: black 4px 8px 20px 4px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.post .title {
+  margin-bottom: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background-color: #5d7acd;
+  padding: 12px;
+}
+
+.post .body {
+  margin: 12px;
+  min-height: 200px;
+  text-align: left;
+}
+
+.post .footer {
+  margin-top: 12px;
+  padding: 12px;
+  border-top: 1px solid #000000;
+  text-align: right;
+  background-color: #5d7acd;
+}
+
+.postUser {
+  display: inline-block;
+  float: left;
+}
+
+.postLikes {
+  display: inline-block;
+  float: right;
+}
+
+.likeButton {
+  color: #ffffff;
+}
+
+.unlikeButton {
+  color: rgba(255, 0, 0, 1);
+}
+/*add post form (page) */
+.addPostPage {
+  margin: 16px auto;
+  display: flex;
+  border:2px solid #5d7acd;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.addPostPage form {
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  padding: 16px;
+  font-size: 1.2em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.addPostPage form label {
+  margin: 8px 0;
+}
+
+.formInput, button {
+  margin: 8px 0;
+  min-height: 32px;
+  padding: 4px;
+}
+
+button, .loginForm button {
+  color: #fff;
+  background: #5d7acd;
+  padding: 8px;
+  font-family: monospace;
+  border: none;
+}
+
+.addPostPage button:hover {
+  background: #000000
+}
+
+.addPostPage span {
+  color: rgba(255, 0, 0, 1);
+}
+
+/* post page */
+
+.postPage {
+  align-items: self-start;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.leftSide, .rightSide {
+  width: 50%;
+}
+
+.singlePost {
+  padding: 2em;
+}
+
+.singlePostBody {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.singlePostTitle, .singlePostFooter {
+  background-color: #5d7acd;
+  color: #fff;
+  font-size: 2em;
+  padding: .5em;
+}
+
+.singlePostFooter {
+  text-align: right;
+}
+
+.addCommentContainer input, .loginForm input {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2em;
+  height: 32px;
+  padding: 0 8px;
+  margin: 8px;
+}
+
+.comment {
+  border: 1px solid;
+  width: 50%;
+  margin: 8px auto;
+  padding: 12px;
+  text-align: left;
+}
+
+/* login form */
+
+.loginForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 16px auto; 
+  max-width: 360px;
+}
+
+.loginForm button, .loginForm input {
+  width: 100%;
+}
+
+.logout_button {
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  margin: 0 12px;
+  font-family: monospace;
+  font-size: 1.6em;
+}
+
+.logout_button:hover {
+  background-color: #ffffff;
+  color: #5d7acd;
+}
